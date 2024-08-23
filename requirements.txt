@@ -1,0 +1,8 @@
+numpy==2.0.1
+pandas==2.2.2
+openai==1.37.1
+python-dotenv==1.0.1
+dataclasses-json==0.6.7
+Babel==2.15.0
+Jinja2==3.1.4
+tqdm==4.66.4

@@ -1,0 +1,1226 @@
+[
+  {
+    "service_name": "calendar_events",
+    "intent_operations": [
+      {
+        "name": "create",
+        "description": "Create a calendar event.",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "date",
+          "start_time",
+          "duration_time"
+        ],
+        "optional_slots": [
+          "attendees",
+          "name",
+          "location"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "delete",
+        "description": "Delete a calendar event.",
+        "require_input_values": false,
+        "require_context": true,
+        "require_confirmation": true,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 0,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "name",
+          "location"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "check",
+        "description": "Check specific information of a calendar event.",
+        "require_input_values": false,
+        "require_context": true,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": true,
+        "check_on_input": true,
+        "can_refer_to_input_slot": false,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "date",
+          "start_time",
+          "duration_time",
+          "attendees",
+          "name",
+          "location"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "modify",
+        "description": "Modify a specific slot of a calendar event.",
+        "require_input_values": true,
+        "require_context": true,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "date",
+          "start_time",
+          "duration_time",
+          "attendees",
+          "name",
+          "location"
+        ],
+        "result_slots": []
+      }
+    ],
+    "slots": [
+      {
+        "name": "date",
+        "description": "The date of the calendar event.",
+        "potential_values": [],
+        "alias": [
+          "start_date"
+        ]
+      },
+      {
+        "name": "start_time",
+        "description": "The time of the calendar event.",
+        "potential_values": [],
+        "alias": [
+          "time"
+        ]
+      },
+      {
+        "name": "duration_time",
+        "description": "The duration_time of the calendar event.",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "attendees",
+        "description": "The attendances of the calendar event.",
+        "potential_values": [],
+        "alias": [
+          "contacts"
+        ]
+      },
+      {
+        "name": "name",
+        "description": "The name of the calendar event.",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "location",
+        "description": "The location of the calendar event.",
+        "potential_values": [],
+        "alias": []
+      }
+    ]
+  },
+  {
+    "service_name": "reminders",
+    "intent_operations": [
+      {
+        "name": "create",
+        "description": "Create a reminder.",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "check_on_input": false,
+        "report_result": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 0,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "name"
+        ],
+        "optional_slots": [
+          "notes",
+          "date",
+          "time"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "delete",
+        "description": "Delete a reminder.",
+        "require_input_values": false,
+        "require_context": true,
+        "require_confirmation": true,
+        "return_list": false,
+        "check_on_input": false,
+        "report_result": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 0,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "notes",
+          "date",
+          "time"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "check",
+        "description": "Check specific information of a reminder.",
+        "require_input_values": false,
+        "require_context": true,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": true,
+        "check_on_input": true,
+        "can_refer_to_input_slot": false,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "name",
+          "notes",
+          "date",
+          "time"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "modify",
+        "description": "Modify a specific slot of a reminder.",
+        "require_input_values": true,
+        "require_context": true,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "name",
+          "notes",
+          "date",
+          "time"
+        ],
+        "result_slots": []
+      }
+    ],
+    "slots": [
+      {
+        "name": "name",
+        "description": "The title of the reminder.",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "notes",
+        "description": "The notes of the reminder.",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "date",
+        "description": "The date of the reminder.",
+        "potential_values": [],
+        "alias": [
+          "start_date"
+        ]
+      },
+      {
+        "name": "time",
+        "description": "The time of the reminder.",
+        "potential_values": [],
+        "alias": [
+          "start_time"
+        ]
+      }
+    ]
+  },
+  {
+    "service_name": "alarms",
+    "intent_operations": [
+      {
+        "name": "create",
+        "description": "Create an alarm.",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 0,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "time",
+          "recurring"
+        ],
+        "optional_slots": [
+          "name"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "delete",
+        "description": "Delete an alarm.",
+        "require_input_values": false,
+        "require_context": true,
+        "require_confirmation": true,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 0,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "name"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "check",
+        "description": "Check specific information of an alarm.",
+        "require_input_values": false,
+        "require_context": true,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": true,
+        "check_on_input": true,
+        "can_refer_to_input_slot": false,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "time",
+          "recurring",
+          "name"
+        ],
+        "result_slots": []
+      },
+      {
+        "name": "modify",
+        "description": "Modify a specific slot of an alarm.",
+        "require_input_values": true,
+        "require_context": true,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "time",
+          "recurring",
+          "name"
+        ],
+        "result_slots": []
+      }
+    ],
+    "slots": [
+      {
+        "name": "time",
+        "description": "The time of the alarm.",
+        "potential_values": [],
+        "alias": [
+          "start_time"
+        ]
+      },
+      {
+        "name": "recurring",
+        "description": "If the alarm is re-occuring.",
+        "potential_values": ["True", "False"],
+        "alias": []
+      },
+      {
+        "name": "name",
+        "description": "The title of the alarm.",
+        "potential_values": [],
+        "alias": []
+      }
+    ]
+  },
+  {
+    "service_name": "messages",
+    "intent_operations": [
+      {
+        "name": "send_message",
+        "description": "send a message.",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "contacts"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "contacts",
+          "text"
+        ],
+        "optional_slots": [],
+        "result_slots": []
+      },
+      {
+        "name": "check",
+        "description": "Check specific information of a message.",
+        "require_input_values": false,
+        "require_context": true,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": true,
+        "check_on_input": true,
+        "can_refer_to_input_slot": false,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [],
+        "optional_slots": [
+          "contacts",
+          "text"
+        ],
+        "result_slots": []
+      }
+    ],
+    "slots": [
+      {
+        "name": "contacts",
+        "description": "The contact name of the message.",
+        "potential_values": [],
+        "alias": [
+          "attendees"
+        ]
+      },
+      {
+        "name": "text",
+        "description": "The text of the message.",
+        "potential_values": [],
+        "alias": [
+          "notes"
+        ]
+      }
+    ]
+  },
+  {
+    "service_name": "weather",
+    "intent_operations": [
+      {
+        "name": "get_weather",
+        "description": "Check specific information of the weather.",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": true,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "location",
+          "date"
+        ],
+        "optional_slots": [],
+        "result_slots": [
+          "weather",
+          "temperature",
+          "wind_mph",
+          "chance_of_precipitation",
+          "humidity_level"
+        ]
+      }
+    ],
+    "slots": [
+      {
+        "name": "location",
+        "description": "The city of the weather.",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "weather",
+        "description": "The weather.",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "date",
+        "description": "Date of the weather.",
+        "potential_values": [],
+        "alias": [
+          "start_date"
+        ]
+      },
+      {
+        "name": "temperature",
+        "description": "The temperature.",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "wind_mph",
+        "description": "",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "chance_of_precipitation",
+        "description": "",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "humidity_level",
+        "description": "",
+        "potential_values": [],
+        "alias": []
+      }
+    ]
+  },
+  {
+    "service_name": "music",
+    "intent_operations": [
+      {
+        "name": "search_song",
+        "description": "Search for a song by name",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": true,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "song_name"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "song_name"
+        ],
+        "optional_slots": [],
+        "result_slots": [
+          "song_genre",
+          "song_year",
+          "song_album",
+          "artist_of_song"
+        ]
+      },
+      {
+        "name": "play_song",
+        "description": "Play a specified song",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "song_name"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "song_name"
+        ],
+        "optional_slots": [],
+        "result_slots": []
+      }
+    ],
+    "slots": [
+      {
+        "name": "song_name",
+        "description": "",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "song_genre",
+        "description": "",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "song_year",
+        "description": "",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "song_album",
+        "description": "",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "artist_of_song",
+        "description": "",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      }
+    ]
+  },
+  {
+    "service_name": "home_automation",
+    "intent_operations": [
+      {
+        "name": "operation_on_device",
+        "description": "",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 2,
+        "minimum_initial_slots": [
+          "operation",
+          "device"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "operation",
+          "device",
+          "home_space"
+        ],
+        "optional_slots": [],
+        "result_slots": []
+      }
+    ],
+    "slots": [
+      {
+        "name": "operation",
+        "description": "All possible operations on device",
+        "potential_values": [
+          "turn_on",
+          "turn_off",
+          "turn_up",
+          "turn_down"
+        ],
+        "alias": []
+      },
+      {
+        "name": "device",
+        "description": "",
+        "potential_values": [
+          "lights",
+          "heating"
+        ],
+        "alias": []
+      },
+      {
+        "name": "home_space",
+        "description": "",
+        "potential_values": [
+          "bedroom",
+          "living room",
+          "study room",
+          "dining_room",
+          "kitchen",
+          "bath_room",
+          "guest_bedroom"
+        ],
+        "alias": []
+      }
+    ]
+  },
+  {
+    "service_name": "restaurant_booking",
+    "intent_operations": [
+      {
+        "name": "reserve_table",
+        "description": "Book a table at a specified restaurant in a specified city",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": true,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "restaurant"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "restaurant",
+          "location",
+          "date",
+          "time_of_day"
+        ],
+        "optional_slots": [
+          "reservation_size"
+        ],
+        "result_slots": [
+        ]
+      },
+      {
+        "name": "find_restaurant",
+        "description": "List some restaurants in a given city that serve a specified type of cuisine",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": true,
+        "report_result": true,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "summary_emphasis_slots": [
+          "restaurant_name",
+          "restaurant_address"
+        ],
+        "minimum_initial_slots": [
+          "location"
+        ],
+        "required_slots": [
+          "location",
+          "cuisine_type"
+        ],
+        "optional_slots": [
+          "live_music",
+          "alcohol"
+        ],
+        "result_slots": [
+          "restaurant_name",
+          "contact_number",
+          "restaurant_address",
+          "menu_price_range"
+        ]
+      }
+    ],
+    "slots": [
+      {
+        "name": "restaurant_name",
+        "description": "",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "date",
+        "description": "The date of your reservation",
+        "potential_values": [],
+        "alias": [
+          "start_date"
+        ]
+      },
+      {
+        "name": "time",
+        "description": "Desired time for reservation",
+        "potential_values": [],
+        "alias": [
+          "start_time"
+        ]
+      },
+      {
+        "name": "location",
+        "description": "Which city is the restaurant in?",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "restaurant_address",
+        "description": "The address of the restaurant.",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "cuisine_type",
+        "description": "The type of food served",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "contact_number",
+        "description": "Phone number of the restaurant.",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "alcohol",
+        "description": "If the restaurant serves alcohol.",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "live_music",
+        "description": "If the restaurant has live music.",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "menu_price_range",
+        "description": "",
+        "potential_values": [],
+        "alias": []
+      }
+    ]
+  },
+  {
+    "service_name": "banking",
+    "description": "Banking service for managing accounts and money transfers",
+    "intent_operations": [
+      {
+        "name": "check_bank_balance",
+        "description": "See amount available in account",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": false,
+        "report_result": true,
+        "check_on_input": false,
+        "can_refer_to_input_slot": false,
+        "minimum_input_slot_number": 0,
+        "minimum_initial_slots": [],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "user_account_type"
+        ],
+        "optional_slots": [],
+        "result_slots": [
+          "account_balance"
+        ]
+      },
+      {
+        "name": "transfer_funds",
+        "description": "Transfer money from one of your accounts to another person's account",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": true,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "recipients_account_name"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "user_account_type",
+          "funds_amount",
+          "recipients_account_name"
+        ],
+        "optional_slots": [
+          "recipient_type"
+        ],
+        "result_slots": [
+        ]
+      }
+    ],
+    "slots": [
+      {
+        "name": "user_account_type",
+        "description": "Type of account the user has",
+        "potential_values": [
+          "checking",
+          "savings"
+        ],
+        "alias": []
+      },
+      {
+        "name": "recipient_type",
+        "description": "The type of account of recipient to send money to",
+        "potential_values": [
+          "checking",
+          "savings"
+        ],
+        "alias": []
+      },
+      {
+        "name": "account_balance",
+        "description": "The amount of money you have available in given account",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "funds_amount",
+        "description": "The amount of money to be transferred",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "recipients_account_name",
+        "description": "Name on the account to which money is being sent",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      }
+    ]
+  },
+  {
+    "service_name": "hotel_booking",
+    "description": "Online hotel search and reservation service",
+    "intent_operations": [
+      {
+        "name": "book_hotel",
+        "description": "Finalize room reservation for given hotel and dates",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": true,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "hotel_name"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "hotel_name",
+          "start_date",
+          "amount_of_days",
+          "amount_of_rooms"
+        ],
+        "optional_slots": [],
+        "result_slots": [
+        ]
+      },
+      {
+        "name": "search_hotel",
+        "description": "Find a hotel meeting your preferences",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": true,
+        "report_result": true,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "summary_emphasis_slots": [
+          "hotel_rating",
+          "hotel_name",
+          "rate_per_night",
+          "wifi"
+        ],
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "location"
+        ],
+        "required_slots": [
+          "location"
+        ],
+        "optional_slots": [
+          "wifi",
+          "hotel_rating"
+        ],
+        "result_slots": [
+          "hotel_name",
+          "hotel_address",
+          "hotel_contact",
+          "rate_per_night"
+        ]
+      }
+    ],
+    "slots": [
+      {
+        "name": "location",
+        "description": "The location to search for available hotels",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "amount_of_rooms",
+        "description": "The number of rooms needed",
+        "potential_values": [
+          "1",
+          "2",
+          "3"
+        ],
+        "alias": []
+      },
+      {
+        "name": "start_date",
+        "description": "Day the hotel reservation starts",
+        "potential_values": [],
+        "alias": [
+          "date"
+        ]
+      },
+      {
+        "name": "amount_of_days",
+        "description": "Length of the reservation in days",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "hotel_rating",
+        "description": "Grade of hotel, in stars",
+        "potential_values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "alias": []
+      },
+      {
+        "name": "hotel_name",
+        "description": "Business name of the hotel",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "hotel_address",
+        "description": "Mailing address of hotel",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "hotel_contact",
+        "description": "Contact number of the hotel",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "rate_per_night",
+        "description": "Average price per night for hotel stay",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "wifi",
+        "description": "Boolean flag indicating if wi-fi is available",
+        "potential_values": [
+          "True",
+          "False"
+        ],
+        "alias": []
+      }
+    ]
+  },
+  {
+    "service_name": "movie_booking",
+    "description": "A premier provider for entertainment needs including finding movie locations and purchasing tickets",
+    "intent_operations": [
+      {
+        "name": "purchase_tickets",
+        "description": "Buy movie tickets for the selected show",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": true,
+        "return_list": false,
+        "report_result": false,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "minimum_input_slot_number": 2,
+        "minimum_initial_slots": [
+          "movie_name",
+          "date"
+        ],
+        "summary_emphasis_slots": [],
+        "required_slots": [
+          "movie_name",
+          "ticket_quantity",
+          "date",
+          "showtime",
+          "movie_format",
+          "cinema_name"
+        ],
+        "optional_slots": [],
+        "result_slots": [
+        ]
+      },
+      {
+        "name": "search_movie",
+        "description": "Search movies by location",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": true,
+        "report_result": true,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "summary_emphasis_slots": [
+          "movie_name",
+          "cinema_name"
+        ],
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "location"
+        ],
+        "required_slots": [
+          "location"
+        ],
+        "optional_slots": [
+          "movie_genre",
+          "movie_format"
+        ],
+        "result_slots": [
+          "ticket_price",
+          "cinema_address",
+          "movie_name",
+          "cinema_name"
+        ]
+      },
+      {
+        "name": "get_movie_time",
+        "description": "Shows what times a specific movie is running at a specific city",
+        "require_input_values": true,
+        "require_context": false,
+        "require_confirmation": false,
+        "return_list": true,
+        "report_result": true,
+        "check_on_input": false,
+        "can_refer_to_input_slot": true,
+        "summary_emphasis_slots": [
+          "showtime"
+        ],
+        "minimum_input_slot_number": 1,
+        "minimum_initial_slots": [
+          "movie_name"
+        ],
+        "required_slots": [
+          "movie_name",
+          "location",
+          "date"
+        ],
+        "optional_slots": [
+          "cinema_name",
+          "movie_format"
+        ],
+        "result_slots": [
+          "ticket_price",
+          "showtime"
+        ]
+      }
+    ],
+    "slots": [
+      {
+        "name": "ticket_price",
+        "description": "Charges per ticket",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "ticket_quantity",
+        "description": "Integer number of tickets to buy",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "movie_format",
+        "description": "The format of the specified movie",
+        "potential_values": ["standard", "3d", "2d", "ScreenX", "IMAX"],
+        "alias": []
+      },
+      {
+        "name": "cinema_name",
+        "description": "Name of the cinema",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "showtime",
+        "description": "Start time of screening",
+        "potential_values": [],
+        "alias": [
+          "time",
+          "start_time"
+        ]
+      },
+      {
+        "name": "date",
+        "description": "Specified date of interest",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "movie_genre",
+        "description": "Classification of the movie",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "cinema_address",
+        "description": "Street address of the cinema",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      },
+      {
+        "name": "location",
+        "description": "City where the movie is showing",
+        "potential_values": [],
+        "alias": []
+      },
+      {
+        "name": "movie_name",
+        "description": "Name of movie playing",
+        "potential_values": [],
+        "alias": [
+          "text"
+        ]
+      }
+    ]
+  }
+]

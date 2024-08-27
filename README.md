@@ -6,7 +6,7 @@ This software project accompanies the research paper, [TOAD: Task-Oriented Autom
 <img src="resources/toad_icon.jpg" alt="Toad" width="200px" height="200px">
 </p>
 
-TOAD is a synthetic TOD dataset that simulates <ins>realistic app context interactions</ins> and provides <ins>multiple system response styles</ins>(verbosity & mirroring user expressions).
+TOAD is a synthetic TOD dataset that simulates <ins>realistic app context interactions</ins> and provides <ins>multiple system response styles</ins> (verbosity & mirroring user expressions).
 
 
 ## Run Data Synthesis

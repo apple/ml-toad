@@ -1,6 +1,6 @@
 # TOAD
 
-This software project accompanies the research paper, [TOAD: Task-Oriented Automatic Dialogs with Diverse Response Styles](https://arxiv.org/abs/2402.10137).
+This software project accompanies the research paper, [TOAD: Task-Oriented Automatic Dialogs with Diverse Response Styles](https://arxiv.org/abs/2402.10137). **This paper has been accepted by ACL 2024.**
 
 <p align="center">
 <img src="resources/toad_icon.jpg" alt="Toad" width="200px" height="200px">
